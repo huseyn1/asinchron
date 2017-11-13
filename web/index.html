@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .testClass{
+                
+            }
+            
+            #test_id{
+                
+            }
+            
+            
+            [id="test_id"]{
+                
+            }
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <button id="ajaxCall"> Call ajax </button>
+        <div id="result"></div>
+    
+    
+    <script type="text/javascript" src="assert/js/jquery-3.2.1.min.js"></script>
+    
+    <script type="text/javascript">
+            
+            function documentR(){
+                //fsdfsdf
+            }
+            
+            function testAjax(){
+                $.ajax({
+                url : "cs",
+                method  : "post",
+                dataType: 'json',
+                data : {
+                    a : 1,
+                    b : 2
+                },
+                beforeSend: function (xhr) {
+                    
+                },
+                success: function (data, textStatus, jqXHR) {
+                    alert('ajax success');
+                    console.log(data);
+                    $("#result").html(data);
+                    
+                    },
+                complete: function (jqXHR, textStatus ) {
+                    alert('ajax complete');
+                }
+                
+            });
+            }
+            
+            $(document).ready(function (){
+                
+                $("#ajaxCall").click(function (){
+                    //alert("sasa");
+        
+                    testAjax()
+                });
+            }); 
+            
+        </script>
+    </body>
+    
+</html>
